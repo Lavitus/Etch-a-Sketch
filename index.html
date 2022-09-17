@@ -7,11 +7,39 @@
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
-        <div id="sketchSection">
-            <div id="sketchArea">
-            </div>
+        <div id="canvasOptions">    
+            <label id="canvasLabelText" for="canvasSize">Choose any value from (16-100) for your custom canvas :</label>
+            <input type="number" id="canvasSizeInput" name="canvasSize" min="16" max="100" maxlength="3" value="16">
+            <button id="updCanvas"><span id="updCanvasTxt">Reset</span><ion-icon name="refresh-circle-outline"></ion-icon></button>
         </div>
+        <div id="canvasCurrentSize"></div>
+        <div id="canvasSection">
+            <div id="colorSelection">
+                <button id="red" class="btnColorOpt"></button>
+                <button id="darkRed" class="btnColorOpt"></button>
+                <button id="orange" class="btnColorOpt"></button>
+                <button id="darkOrange" class="btnColorOpt"></button>
+                <button id="yellow" class="btnColorOpt"></button>
+                <button id="darkYellow" class="btnColorOpt"></button>
+                <button id="green" class="btnColorOpt"></button>
+                <button id="darkGreen" class="btnColorOpt"></button>
+                <button id="cyan" class="btnColorOpt"></button>
+                <button id="darkCyan" class="btnColorOpt"></button>
+                <button id="blue" class="btnColorOpt"></button>
+                <button id="darkBlue" class="btnColorOpt"></button>
+                <button id="violet" class="btnColorOpt"></button>
+                <button id="darkViolet" class="btnColorOpt"></button>
+                <button id="pink" class="btnColorOpt"></button>
+                <button id="darkPink" class="btnColorOpt"></button>
+                <button id="black" class="btnColorOpt"></button>
+                <button id="grey" class="btnColorOpt"></button>
+                <button id="white" class="btnColorOpt"></button>   
+                <button id="silver" class="btnColorOpt"></button>
+            </div> 
+            <div id="canvas"></div>
+        </div>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
-    <script type="text/javascript" src="etch-a-sketch.js">
-    </script>
+    <script type="text/javascript" src="etch-a-sketch.js"></script>
 </html>

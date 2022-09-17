@@ -1,22 +1,160 @@
 body {
-    background-color: rgb(190, 201, 206);
+    background-color: rgb(204, 211, 212);
 }
 
-#sketchSection {
+#canvasOptions {
     display: flex;
     justify-content: center;
-    margin-top: 15vh;
+    align-items: center;
+    margin-top: 0.5vw;
 }
 
-#sketchArea {
-    width: 600px;
+#canvasLabelText, ion-icon, #canvasSizeInput {
+    font-size: 1.20vw;
+}
+
+input#canvasSizeInput {
+    width: 3.4vw;
+}
+
+input#canvasSizeInput, button#updCanvas {
+    margin-left: 0.6vw;
+    display: flex;
+    align-items: center;
+}
+
+button#updCanvas.rdyGreen {
+    background-color: green;
+    color: white;
+}
+
+#colorSelection {
+    display: grid;
+    grid-gap: 0.3vw;
+    grid-template-columns: repeat(2, 2fr);
+    grid-template-rows: repeat(9, 2fr);
+    height: fit-content;
+    margin-left: 15vw;
+}
+
+.btnColorOpt {
+    width: 2.5vw;
+    height: 2.5vw;
+    border-radius: 0.4vw;
+}
+
+#red.btnColorOpt {
+    background-color: red;
+}
+
+#darkRed.btnColorOpt {
+    background-color:darkred;
+}
+
+#orange.btnColorOpt {
+    background-color: orange;
+}
+
+#darkOrange.btnColorOpt {
+    background-color: darkorange;
+}
+
+#yellow.btnColorOpt {
+    background-color: yellow;
+}
+
+#darkYellow.btnColorOpt {
+    background-color: rgb(139, 139, 0);
+}
+
+#green.btnColorOpt {
+    background-color: green;
+}
+
+#darkGreen.btnColorOpt {
+    background-color: darkgreen;
+}
+
+#cyan.btnColorOpt {
+    background-color: cyan;
+}
+
+#darkCyan.btnColorOpt {
+    background-color: darkcyan;
+}
+
+#blue.btnColorOpt {
+    background-color: blue;
+}
+
+#darkBlue.btnColorOpt {
+    background-color: darkblue;
+}
+
+#violet.btnColorOpt {
+    background-color: violet;
+}
+
+#darkViolet.btnColorOpt {
+    background-color: darkviolet;
+}
+
+#pink.btnColorOpt {
+    background-color: hotpink;
+}
+
+#darkPink.btnColorOpt {
+    background-color: deeppink;
+}
+
+#black.btnColorOpt {
+    background-color: black;
+}
+
+#grey.btnColorOpt {
+    background-color: grey;
+}
+
+#white.btnColorOpt {
+    background-color: white;
+}
+
+#silver.btnColorOpt {
+    background-color: silver;
+}
+
+#canvasCurrentSize {
+    align-items: center;
+    text-align: center;
+    font-size: 1vw;
+    margin-top: 1.5vw;
+    margin-bottom: 0.5vw;
+}
+
+#canvasSection {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#canvas {
+    height: 40vw;
+    width: 40vw;
     display: grid;
     grid-gap: 0px;
-    grid-template-columns: repeat(16, 40px);
+    border: 1px solid rgb(65, 65, 65);
+    margin-right: 29.3vw;
 }
 
-#sketchBox {
+#canvasBox {
     background-color: white;
-    border-radius: 1px;
-    padding: 20px;
+    border-radius: 0px;
+}
+
+#canvasBox, .btnColorOpt, button#updCanvas {
+    transition: transform .2s; 
+}
+
+#canvasBox:hover, .btnColorOpt:hover, button#updCanvas:hover {
+    transform: scale(1.2);
 }
