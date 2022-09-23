@@ -9,8 +9,8 @@ body {
     margin-top: 0.5vw;
 }
 
-#canvasLabelText, ion-icon, #canvasSizeInput {
-    font-size: 1.20vw;
+#canvasLabelText, ion-icon, #canvasSizeInput, #updCanvas {
+    font-size: 1.25vw;
 }
 
 input#canvasSizeInput {
@@ -37,89 +37,90 @@ button#updCanvas.rdyGreen {
     margin-left: 15vw;
 }
 
-.btnColorOpt {
+.btnColorOpt, .canvasBox {
     width: 2.5vw;
     height: 2.5vw;
     border-radius: 0.4vw;
+    drag
 }
 
-#red.btnColorOpt {
+#red.btnColorOpt, #red.canvasBox {
     background-color: red;
 }
 
-#darkRed.btnColorOpt {
+#darkRed.btnColorOpt, #darkRed.canvasBox {
     background-color:darkred;
 }
 
-#orange.btnColorOpt {
+#orange.btnColorOpt, #orange.canvasBox {
     background-color: orange;
 }
 
-#darkOrange.btnColorOpt {
+#darkOrange.btnColorOpt, #darkOrange.canvasBox {
     background-color: darkorange;
 }
 
-#yellow.btnColorOpt {
+#yellow.btnColorOpt, #yellow.canvasBox {
     background-color: yellow;
 }
 
-#darkYellow.btnColorOpt {
+#darkYellow.btnColorOpt, #darkYellow.canvasBox {
     background-color: rgb(139, 139, 0);
 }
 
-#green.btnColorOpt {
+#green.btnColorOpt, #green.canvasBox {
     background-color: green;
 }
 
-#darkGreen.btnColorOpt {
+#darkGreen.btnColorOpt, #darkGreen.canvasBox {
     background-color: darkgreen;
 }
 
-#cyan.btnColorOpt {
+#cyan.btnColorOpt, #cyan.canvasBox {
     background-color: cyan;
 }
 
-#darkCyan.btnColorOpt {
+#darkCyan.btnColorOpt, #darkCyan.canvasBox {
     background-color: darkcyan;
 }
 
-#blue.btnColorOpt {
+#blue.btnColorOpt, #blue.canvasBox {
     background-color: blue;
 }
 
-#darkBlue.btnColorOpt {
+#darkBlue.btnColorOpt, #darkBlue.canvasBox {
     background-color: darkblue;
 }
 
-#violet.btnColorOpt {
+#violet.btnColorOpt, #violet.canvasBox {
     background-color: violet;
 }
 
-#darkViolet.btnColorOpt {
+#darkViolet.btnColorOpt, #darkViolet.canvasBox {
     background-color: darkviolet;
 }
 
-#pink.btnColorOpt {
+#pink.btnColorOpt, #pink.canvasBox {
     background-color: hotpink;
 }
 
-#darkPink.btnColorOpt {
+#darkPink.btnColorOpt, #darkPink.canvasBox {
     background-color: deeppink;
 }
 
-#black.btnColorOpt {
+#black.btnColorOpt, #black.canvasBox {
     background-color: black;
 }
 
-#grey.btnColorOpt {
+#grey.btnColorOpt, #grey.canvasBox {
     background-color: grey;
 }
 
-#white.btnColorOpt {
+#white.btnColorOpt, #white.canvasBox {
     background-color: white;
 }
 
-#silver.btnColorOpt {
+#silver.btnColorOpt, #silver.canvasBox {
     background-color: silver;
 }
 
@@ -146,15 +147,14 @@ button#updCanvas.rdyGreen {
     margin-right: 29.3vw;
 }
 
-#canvasBox {
-    background-color: white;
+.canvasBox {
     border-radius: 0px;
 }
 
-#canvasBox, .btnColorOpt, button#updCanvas {
+.canvasBox, .btnColorOpt, .canvasBox, button#updCanvas {
     transition: transform .2s; 
 }
 
-#canvasBox:hover, .btnColorOpt:hover, button#updCanvas:hover {
+.canvasBox:hover, .btnColorOpt:hover, .canvasBox:hover, button#updCanvas:hover {
     transform: scale(1.2);
 }
