@@ -69,8 +69,8 @@ function loadCanvas() {
             e.preventDefault()
           })
         
+        canvasBox.addEventListener("mousedown", (e) => e.target.setAttribute("id", currentColorChoice)); 
         canvasBox.addEventListener("mouseover", (e) => changeColor(e)) 
-        canvasBox.addEventListener("click", (e) => changeColor(e)); 
         
         canvas.appendChild(canvasBox);
     }
