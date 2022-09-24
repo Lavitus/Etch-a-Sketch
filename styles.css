@@ -37,11 +37,10 @@ button#updCanvas.rdyGreen {
     margin-left: 15vw;
 }
 
-.btnColorOpt, .canvasBox {
+.btnColorOpt {
     width: 2.5vw;
     height: 2.5vw;
     border-radius: 0.4vw;
-    drag
 }
 
 #red.btnColorOpt, #red.canvasBox {
