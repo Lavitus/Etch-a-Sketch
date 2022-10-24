@@ -13,7 +13,7 @@ body {
 }
 
 #canvasLabelText, ion-icon, #canvasSizeInput, #updCanvas {
-    font-size: 1.2vw;
+    font-size: clamp(0.4rem, 1.4vw, 4.5rem);
     font-weight: bold;
 }
 
@@ -31,7 +31,7 @@ input#canvasSizeInput, button#updCanvas {
 }
 
 button#updCanvas {
-    width: clamp(23.5px, 6vw, 410px);
+    width: clamp(31.5px, 6.3vw, 360px);
 }
 
 button#updCanvas.rdyGreen {
@@ -54,15 +54,21 @@ button#updCanvas.rdyGreen {
     padding: 0.4vw;
     border: 0.35vw solid #9397a5;
     border-radius: 0.8vw;
+    /* max-width: 5.3vw; */
+    /* min-height: 28vw; */
 }
 
 .btnColorOpt {
-    width: 2.5vw;
-    height: 2.5vw;
+    width: 48px;
+    height: 48px;
     border-radius: 1vw;
     border: 0.11vw solid #e9ecfe;
     padding: 0;
     opacity: 65%;
+    min-width: 2.5vw;
+    min-height: 2.5vw;
+    max-width: 3.5vw;
+    max-height: 3.5vw;
 }
 
 .clicked {
@@ -155,7 +161,7 @@ button#updCanvas.rdyGreen {
 #canvasCurrentSize {
     align-items: center;
     text-align: center;
-    font-size: 1vw;
+    font-size: clamp(0.4rem, 1.3vw, 4.5rem);
     margin-top: 1.5vw;
     margin-bottom: 0.5vw;
     font-weight: bold;
@@ -168,12 +174,16 @@ button#updCanvas.rdyGreen {
 }
 
 #canvas {
-    height: 40vw;
-    width: 40vw;
+    height: 800px;
+    width: 800px;
     display: grid;
     grid-gap: 0px;
-    border: 0.3vh solid rgb(65, 65, 65);
+    border: 0.5px solid rgb(65, 65, 65);
     /* margin-left: 22vw; */
+    max-width: 80vw;
+    max-height: 80vw;
+    min-width: 41vw;
+    min-height: 41vw;
 }
 
 .canvasBox {
