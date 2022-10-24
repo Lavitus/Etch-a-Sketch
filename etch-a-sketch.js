@@ -4,11 +4,14 @@ const updateBtnText = document.getElementById("updCanvasTxt");
 const canvasInput = document.getElementById("canvasSizeInput");
 const canvasUpdater = document.getElementById("updCanvas");
 const colorChoices = document.querySelectorAll('.btnColorOpt');
+const rainbowBtn = document.getElementById("rainbow");
+const pencilButtons = document.querySelectorAll(".pnclBtn");
 
 let currentCanvasVal = 16;
 let newCanvasInput = 16;
 let currentColorChoice = "white";
 let isMouseDown;
+let currentMode = "normal";
 
 document.addEventListener("mousedown", () => isMouseDown = true);
 document.addEventListener("mouseup", () => isMouseDown = false);  
@@ -78,28 +81,47 @@ function loadCanvas() {
 }
 loadCanvas();
 
-// get color ID on click
-
+rainbowBtn.addEventListener("click", function() {
+    currentMode = "rainbow";
+})
 
 for (let i = 0; i < colorChoices.length; i++) {
     let button = colorChoices[i];
     
-    // Add click event to colorChoices
     button.addEventListener("click", function(event) {
+    // get color ID
         let colorIndex = Array.prototype.indexOf.call(colorChoices, event.target);
         currentColorChoice = colorChoices[colorIndex].id;
-      // First remove 'clicked' class from all colorChoices
-      colorChoices.forEach(function(item){
-        item.classList.remove("clicked");
-      })
+        currentMode = "classicColor";
+    });
+}
+
+for (let i = 0; i < pencilButtons.length; i++) {
+    let button = pencilButtons[i];
+    
+    // Add click event to colorChoices
+    button.addEventListener("click", function(event) {
+        // First remove 'clicked' class from all colorChoices
+        pencilButtons.forEach(function(item){
+            item.classList.remove("clicked");
+        })
       
-      // Next add 'clicked' class to clicked button
-      button.classList.add("clicked");
+        // Next add 'clicked' class to clicked button
+        button.classList.add("clicked");
+
     });
 }  
 
 // change color when clicking and mouse held down while hovering over boxes
 function changeColor(e) {
     if(!isMouseDown) return;
-    e.target.setAttribute("id", currentColorChoice)
+    if (currentMode === 'classicColor') {
+        e.target.setAttribute("id", currentColorChoice)
+        e.target.style = ""
+    } else if (currentMode === 'rainbow') {
+        const randomR = Math.floor(Math.random() * 256)
+        const randomG = Math.floor(Math.random() * 256)
+        const randomB = Math.floor(Math.random() * 256)
+        e.target.style.backgroundColor = `rgb(${randomR}, ${randomG}, ${randomB})`
+    }
 }

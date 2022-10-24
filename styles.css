@@ -13,12 +13,8 @@ body {
 }
 
 #canvasLabelText, ion-icon, #canvasSizeInput, #updCanvas {
-    font-size: clamp(0.4rem, 1.4vw, 4.5rem);
+    font-size: clamp(0.13rem, 1.4vw, 4.5rem);
     font-weight: bold;
-}
-
-input#canvasSizeInput {
-    width: clamp(24px, 5.7vw, 210px);
 }
 
 input#canvasSizeInput, button#updCanvas {
@@ -31,7 +27,7 @@ input#canvasSizeInput, button#updCanvas {
 }
 
 button#updCanvas {
-    width: clamp(31.5px, 6.3vw, 360px);
+    width: clamp(14.5px, 7.3vw, 360px);
 }
 
 button#updCanvas.rdyGreen {
@@ -47,9 +43,9 @@ button#updCanvas.rdyGreen {
     display: grid;
     grid-gap: 0.3vw;
     grid-template-columns: repeat(2, 0fr);
-    position: absolute;
+    /* position: absolute; */
     grid-template-rows: repeat(9, 0fr);
-    margin-right: 90vw;
+    margin-left: 12.5vw;
     background-color: #c4cbd5;
     padding: 0.4vw;
     border: 0.35vw solid #9397a5;
@@ -59,8 +55,8 @@ button#updCanvas.rdyGreen {
 }
 
 .btnColorOpt {
-    width: 48px;
-    height: 48px;
+    /* width: 48px; */
+    /* height: 48px; */
     border-radius: 1vw;
     border: 0.11vw solid #e9ecfe;
     padding: 0;
@@ -69,6 +65,25 @@ button#updCanvas.rdyGreen {
     min-height: 2.5vw;
     max-width: 3.5vw;
     max-height: 3.5vw;
+}
+
+#rainbow {
+    width: 5vw;
+    height: 5vw;
+    border-radius: 5vw;
+    margin-left: 1vw;
+    border: 0.5vw solid deeppink;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8vw;
+    background-color: mediumpurple;
+    color: white;
+    font-weight: bold;
+}
+
+.pnclBtn {
+    opacity: 65%;
 }
 
 .clicked {
@@ -161,7 +176,7 @@ button#updCanvas.rdyGreen {
 #canvasCurrentSize {
     align-items: center;
     text-align: center;
-    font-size: clamp(0.4rem, 1.3vw, 4.5rem);
+    font-size: clamp(0.15rem, 1.3vw, 4.5rem);
     margin-top: 1.5vw;
     margin-bottom: 0.5vw;
     font-weight: bold;
@@ -169,31 +184,33 @@ button#updCanvas.rdyGreen {
 
 #canvasSection {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    /* justify-content: center; */
+    /* flex-direction: row; */
+    align-items: center;
 }
 
 #canvas {
-    height: 800px;
-    width: 800px;
+    /* height: 800px; */
+    /* width: 800px; */
     display: grid;
     grid-gap: 0px;
     border: 0.5px solid rgb(65, 65, 65);
-    /* margin-left: 22vw; */
+    margin-left: 4vw;
     max-width: 80vw;
     max-height: 80vw;
     min-width: 41vw;
     min-height: 41vw;
+    /* margin-right: 6vw; */
 }
 
 .canvasBox {
     border-radius: 0px;
 }
 
-.canvasBox, .btnColorOpt, .canvasBox, button#updCanvas {
+.canvasBox, .btnColorOpt, .canvasBox, button#updCanvas, #rainbow {
     transition: transform .2s;
 }
 
-.canvasBox:hover, .btnColorOpt:hover, .canvasBox:hover, button#updCanvas:hover {
+.canvasBox:hover, .btnColorOpt:hover, .canvasBox:hover, button#updCanvas:hover, #rainbow:hover {
     transform: scale(1.2);
 }
