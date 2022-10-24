@@ -3,7 +3,7 @@ const canvasSizeText = document.getElementById("canvasCurrentSize");
 const updateBtnText = document.getElementById("updCanvasTxt");
 const canvasInput = document.getElementById("canvasSizeInput");
 const canvasUpdater = document.getElementById("updCanvas");
-const colorChoices = document.getElementById('colorSelection');
+const colorChoices = document.querySelectorAll('.btnColorOpt');
 
 let currentCanvasVal = 16;
 let newCanvasInput = 16;
@@ -79,11 +79,25 @@ function loadCanvas() {
 loadCanvas();
 
 // get color ID on click
-colorChoices.addEventListener("click", 
-    function(event) {
-        let colorIndex = Array.prototype.indexOf.call(colorChoices.children, event.target);
-        currentColorChoice = colorChoices.children[colorIndex].id;
+
+
+for (let i = 0; i < colorChoices.length; i++) {
+    let button = colorChoices[i];
+    
+    // Add click event to colorChoices
+    button.addEventListener("click", function(event) {
+        let colorIndex = Array.prototype.indexOf.call(colorChoices, event.target);
+        currentColorChoice = colorChoices[colorIndex].id;
+      // First remove 'clicked' class from all colorChoices
+      colorChoices.forEach(function(item){
+        item.classList.remove("clicked");
+      })
+      
+      // Next add 'clicked' class to clicked button
+      button.classList.add("clicked");
     });
+}  
+
 // change color when clicking and mouse held down while hovering over boxes
 function changeColor(e) {
     if(!isMouseDown) return;
